@@ -61,7 +61,7 @@ pub struct zend_function_entry {
 #[no_mangle]
 pub extern "C" fn zif_confirm_rust_a_star_compiled(_: c_int, _: *mut zval, _: *mut *mut zval, _: *mut zval, _: c_int) {
 //    panic!("yay");
-    println!("lol");
+//    println!("lol");
 }
 
 #[no_mangle]
