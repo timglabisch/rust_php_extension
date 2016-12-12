@@ -74,7 +74,7 @@ pub extern "C" fn zm_generic_rust_a_star(_: c_int, _: c_int) -> c_int {
 pub extern "C" fn zm_info_rust_a_star(_: *const zend_module_entry) { }
 
 #[no_mangle]
-pub extern "C" fn get_module(_: c_void) -> zend_module_entry {
+pub extern "C" fn get_module(_: c_void) -> *const zend_module_entry {
     use std::mem;
 
     let rust_a_star_functions = Box::new([
@@ -123,5 +123,5 @@ pub extern "C" fn get_module(_: c_void) -> zend_module_entry {
         build_id:             CString::new("API20160303,NTS,debug").unwrap().into_raw()
     };
 
-    rust_a_star_module_entry
+    &rust_a_star_module_entry
 }
