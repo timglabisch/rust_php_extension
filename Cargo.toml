@@ -1,0 +1,8 @@
+[package]
+name = "rust_a_star"
+version = "0.0.1"
+authors = ["Jared McFarland <jared.online@gmail.com>"]
+
+[lib]
+name = "rust_a_star"
+crate-type = ["dylib"]
